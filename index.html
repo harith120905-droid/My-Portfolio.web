@@ -234,17 +234,30 @@ Your browser does not support the audio element.
 </audio>
 
 <script>
-  const audio = document.getElementById("bgMusic");
-  const playButton = document.getElementById("playMusic");
+const audio = document.getElementById("bgMusic");
+const playButton = document.getElementById("playMusic");
 
-  playButton.addEventListener("click", async () => {
+// Try autoplay when page opens
+window.addEventListener("load", async () => {
     try {
-      await audio.play();
-      playButton.textContent = "Pause music";
+        await audio.play();
+        playButton.textContent = "Pause music";
     } catch (error) {
-      console.error("Could not play audio:", error);
+        console.log("Autoplay blocked. Waiting for user interaction.");
+        playButton.textContent = "Play music";
     }
-  });
+});
+
+// Play and pause button
+playButton.addEventListener("click", async () => {
+    if (audio.paused) {
+        await audio.play();
+        playButton.textContent = "Pause music";
+    } else {
+        audio.pause();
+        playButton.textContent = "Play music";
+    }
+});
 // Hide All page
 document.querySelectorAll('.Education').forEach(Page => {
 page.classList.remove('active');
