@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Appendices-Wan Harith Portfolio</title>
+    <style>
+        :root {
+            --primary: #0f172a;       /* Deep Slate Background */
+            --card-bg: #1e293b;      /* Slate Card Background */
+            --accent: #38bdf8;       /* Vibrant Cyan Accent */
+            --text-main: #f8fafc;    /* Clean White Text */
+            --text-sub: #94a3b8;     /* Light Gray Text */
+            --border: #334155;       /* Card Border */
+        }
+        
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: var(--primary);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: rgba(15, 23, 42, 0.95);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: var(--text-sub);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+         }
+            /* Card Structure */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            
+        }
+
+        .page-title {
+            color: var(--accent);
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: 32px;
+            padding: 10px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        /* Centers the card and stacks the buttons underneath */
+        .gallery-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* Hover Card Container */
+        .hover-card {
+            position: relative;
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(56, 189, 248, 0.25);
+        }
+
+        /* Hide inactive slides */
+        .slide {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: none;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        /* Card Caption Styling */
+        .card-caption {
+            padding: 16px 20px;
+            text-align: center;
+        }
+
+        .card-caption h3 {
+            margin: 0 0 6px 0;
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        .card-caption p {
+            margin: 0;
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        /* Button Container Below the Card */
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Action Slider Buttons */
+        .slider-btn {
+            background-color: var(--card-bg);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+        }
+
+        .slider-btn:hover {
+            background-color: var(--accent);
+            color: var(--primary);
+            transform: scale(1.08);
+        }
+
+        .slider-btn:active {
+            transform: scale(0.95);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-sub);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="nav-logo">Wan Harith Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="Work.html">Work Experience</a></li>
+                <li><a href="profesional.html">Professionalism</a></li>
+                <li><a href="picture.html" class="active">Appendices</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <div class="container">
+        <div class="card">
+        <div>
+            <h2 class="page-title"><b><i>My Appendices</i></b></h2>
+
+            <div class="gallery-wrapper">
+                <!-- Hover Card with Picture -->
+                <div class="hover-card">
+                <img src="my halal application.jpeg" class="slide active" alt="Halal Supervisor">
+                    <img src="barista.jpeg" class="slide" alt="Barista">
+                    <img src="halal certificate.png" class="slide" alt="Halal Awareness Certificate">
+
+                    <div class="card-caption">
+                        <h3 id="slider-title">Halal Supervisor</h3>
+                        <p id="slider-desc">Professional Experience Highlights</p>
+                    </div>
+                </div>
+
+                <!-- Previous & Next Arrow Buttons Below Card -->
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn" onclick="changeSlide(-1)">❮</button>
+                    <button class="slider-btn next-btn" onclick="changeSlide(1)">❯</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const titleEl = document.getElementById('slider-title');
+        const descEl = document.getElementById('slider-desc');
+
+        const slideInfo = [
+            { title: "Halal Supervisor", desc: "Halal Certification & Compliance Management" },
+            { title: "Barista", desc: "Specialty Coffee & Latte Art Craftsmanship" },
+            { title: "Halal Awareness Certificate", desc: "Official Certification & Training Credential" }
+        ];
+
+        function changeSlide(direction) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+
+            titleEl.textContent = slideInfo[currentSlide].title;
+            descEl.textContent = slideInfo[currentSlide].desc;
+        }
+    </script>
+
+<footer><i><B> Wan Harith Copyright </i></B></footer>
+
+</body>
+</html>

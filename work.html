@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Experience - Wan Harith Portfolio</title>
+    <style>
+        :root {
+            --primary: #0f172a;       /* Deep Slate Background */
+            --card-bg: #1e293b;      /* Slate Card Background */
+            --accent: #38bdf8;       /* Vibrant Cyan Accent */
+            --text-main: #f8fafc;    /* Clean White Text */
+            --text-sub: #94a3b8;     /* Light Gray Text */
+            --border: #334155;       /* Card Border */
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: var(--primary);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(15, 23, 42, 0.95);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: var(--text-sub);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Card Structure */
+        .card {
+            width: 100%;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: var(--accent);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 10px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: var(--text-main);
+            font-size: 1.25rem;
+            margin-top: 0;
+        }
+
+        .meta {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .work-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .work-item:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px auto 20px auto;
+            border: 2px solid #1F4E79;
+        }
+
+        th {
+            background-color: #1F4E79;
+            color: #ffffff;
+            padding: 12px;
+            border: 1px solid #ffffff;
+            text-align: center;
+        }
+
+        td {
+            color: #000000;
+            padding: 12px;
+            border: 1px solid #808080;
+            background-color: #F4F8FC;
+            text-align: center;
+        }
+
+        tr:hover td {
+            background-color: #DCE6F1;
+        }
+
+        /* Action Buttons */
+        .btn-link {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--primary);
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: opacity 0.2s;
+        }
+
+        .btn-link:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-sub);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <a href="index.html" class="nav-logo">Wan Harith Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="Work.html" class="active">Work Experience</a></li>
+                <li><a href="profesional.html">Professionalism</a></li>
+                <li><a href="picture.html">Appendices</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        <div class="card">
+            <h1><i><b>Work Experience</b></i></h1>
+
+            <div class="work-item">
+                <h2>Sayong Food Sdn Bhd (The Levé Cafe)</h2>
+
+                <div class="meta">
+                    <table>
+                        <tr>
+                            <th>Role</th>
+                            <th>Year Of Service</th>
+                            <th>Skills</th>
+                            <th>Current Work</th>
+                        </tr>
+                        <tr>
+                            <td>Barista Cum Halal Supervisor</td>
+                            <td>1 Year 6 Months</td>
+                            <td>Halal Awareness</td>
+                            <td>Still Working</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <p><b>Skills:</b></p>
+                <div class="meta">
+                    <b><i>
+                        1) Halal Procedure | 2) Hygiene's |
+                        3) Standard Of Operation (SOP) | 4) Customer Service
+                    </i></b>
+                </div>
+            </div>
+
+            <!-- Work Experience Focus -->
+            <div class="work-item">
+                <h2>Job Scope</h2>
+                <h3><b><mark>Bridging Quality Halal Governance & Modern Information Architecture</mark></b></h3>
+                <hr>
+                <p>Responsible for preparing and serving beverages, providing excellent customer service, and managing daily café operations. Ensure compliance with halal standards by monitoring ingredient certifications, food handling, storage, and preparation procedures. Maintain cleanliness and hygiene, supervise staff on halal practices, manage inventory, and ensure all operations comply with company policies and food safety requirements.</p>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="index.html" class="btn-link">← Return to About Me</a>
+            </div>
+        </div>
+    </div>
+
+    <footer><b><i>Wan Harith Copyright</i></b></footer>
+
+</body>
+</html>

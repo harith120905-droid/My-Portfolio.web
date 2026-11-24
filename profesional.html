@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesionalism - Wan Harith Portfolio</title>
+    <style>
+        :root {
+            --primary: #0f172a;       /* Deep Slate Background */
+            --card-bg: #1e293b;      /* Slate Card Background */
+            --accent: #38bdf8;       /* Vibrant Cyan Accent */
+            --text-main: #f8fafc;    /* Clean White Text */
+            --text-sub: #94a3b8;     /* Light Gray Text */
+            --border: #334155;       /* Card Border */
+}
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: var(--primary);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+}
+
+     header {
+    background-color: rgba(15, 23, 42, 0.95);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--text-sub);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent);
+}
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+}
+
+        /* Card Structure */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+        h1 {
+            color: var(--accent);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 10px;
+            margin-top: 0;
+            text-align: center;
+}
+
+        h2 {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-top: 0;
+
+}
+
+        h3 {
+            color: var(white);
+            font-size: 1.5 rem;
+            margin-top: 0;
+
+}
+
+        .meta {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+}
+
+        .work-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed var(--border);
+}
+
+        .work-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+}
+
+        /* Action Buttons */
+        .btn-link {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--primary);
+            padding: 9px 9px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: opacity 0.2s;
+}
+
+.btn-link:hover {
+opacity: 0.9;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #1F4E79;
+        }
+
+        th {
+            background-color: #1F4E79;
+            color: white;
+            padding: 12px;
+            border: 1px solid #ffffff;
+            text-align: center;
+        }
+
+        td {
+            color: black;
+            padding: 12px;
+            border: 1px solid #808080;
+            background-color: #F4F8FC;
+            text-align: center;
+        }
+
+        tr:hover td {
+            background-color: #DCE6F1;
+        }
+
+        /* Bubble Map SVG Styling */
+        .bubble-wrapper {
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+            background-color: var(--primary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .bubble-group {
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .bubble-group:hover circle {
+            filter: brightness(1.15);
+        }
+
+        .bubble-text {
+            color: white;
+            font-weight: 600;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            line-height: 1.25;
+            word-wrap: break-word;
+        
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-sub);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <a href="index.html" class="nav-logo">Wan Harith Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="work.html">Work Experience</a></li>
+                <li><a href="profesional.html" class="active">Professionalism</a></li>
+                <li><a href="picture.html">Appendinces</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        <div class="card">
+            <h1><i>Body Profesionalism</h1><i>
+
+            <div class="work-item">
+                <h2>My Professionalism</h2>
+                <div class="meta">
+                    <table>
+                        <tr>
+                            <th>Criteria:</th>
+                            <th>Certificate:</th>
+                            <th>Recognition:</th>
+                            <th>Validity:</th>
+                        </tr>
+                        <tr>
+                            <td>Completed Halal Competency Training (Latihan Kompetensi Halal) or Internal Halal Control System (IHCS) / Halal Supervisor Training—not merely a basic 3-hour Halal Awareness course</td>
+                            <td>Halal Training Provider (Penyedia Latihan Halal - PLH) officially registered and listed under HPB-JAKIM. Certificates from unaccredited consultants or non-PLH trainers are rejected during audits</td>
+                            <td>Recognized by JAKIM and State Islamic Religious Councils (JAIN/MAIN)</td>
+                            <td>Completed HPB-recognized training within 3 months of the appointment date.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Benefits Bubble Map -->
+            <h2>Benefits of Professionalism</h2>
+<hr>
+            <div class="bubble-wrapper">
+                <svg id="bubbleMap" viewBox="0 0 800 550"></svg>
+            </div>
+
+            <div style="text-align: center;">
+<a href="index.html" class="btn-link">&larr; Return to About Me</a>
+</div>
+
+</div>
+
+        </div>
+    </div>
+
+    <script>
+        // Edit bubble map words & layout here
+        const bubbleData = [
+            { id: "center", x: 400, y: 275, r: 85, color: "#2563eb", text: "Halal Professionalism Benefits", fontSize: "16px" },
+            { id: "b1",     x: 170, y: 120, r: 65, color: "#10b981", text: "Smoother JAKIM / JAIN Audits", fontSize: "13px", parent: "center" },
+            { id: "b2",     x: 630, y: 120, r: 68, color: "#f59e0b", text: "Supply Chain & Contamination Control", fontSize: "12px", parent: "center" },
+            { id: "b3",     x: 150, y: 410, r: 65, color: "#8b5cf6", text: "Operational Continuity & Risk Mitigation", fontSize: "12px", parent: "center" },
+            { id: "b4",     x: 650, y: 410, r: 65, color: "#ec4899", text: "Brand Trust & Commercial Growth", fontSize: "13px", parent: "center" },
+            { id: "b5",     x: 400, y: 475, r: 60, color: "#06b6d4", text: "Internal Accountability & Culture", fontSize: "12px", parent: "center" }
+        ];
+
+        const svg = document.getElementById("bubbleMap");
+        const svgNS = "http://www.w3.org/2000/svg";
+
+        // Helper to find parent coordinates
+        const getBubbleById = (id) => bubbleData.find(b => b.id === id);
+
+        // 1. Draw connecting lines first (so it stay behind bubble)
+        bubbleData.forEach(bubble => {
+            if (bubble.parent) {
+                const parent = getBubbleById(bubble.parent);
+                if (parent) {
+                    const line = document.createElementNS(svgNS, "line");
+                    line.setAttribute("x1", parent.x);
+                    line.setAttribute("y1", parent.y);
+                    line.setAttribute("x2", bubble.x);
+                    line.setAttribute("y2", bubble.y);
+                    line.setAttribute("stroke", "#475569");
+                    line.setAttribute("stroke-width", "3");
+                    svg.appendChild(line);
+                }
+            }
+        });
+
+        // 2. Draw bubbles & wrapped text
+        bubbleData.forEach(bubble => {
+            const group = document.createElementNS(svgNS, "g");
+            group.setAttribute("class", "bubble-group");
+
+            // Circle
+            const circle = document.createElementNS(svgNS, "circle");
+            circle.setAttribute("cx", bubble.x);
+            circle.setAttribute("cy", bubble.y);
+            circle.setAttribute("r", bubble.r);
+            circle.setAttribute("fill", bubble.color);
+            group.appendChild(circle);
+
+            // foreignObject allows HTML inside SVG so multi-line words wrap automatically
+            const foreignObject = document.createElementNS(svgNS, "foreignObject");
+            const diameter = bubble.r * 2;
+            foreignObject.setAttribute("x", bubble.x - bubble.r);
+            foreignObject.setAttribute("y", bubble.y - bubble.r);
+            foreignObject.setAttribute("width", diameter);
+            foreignObject.setAttribute("height", diameter);
+
+            const div = document.createElement("div");
+            div.setAttribute("class", "bubble-text");
+            div.style.fontSize = bubble.fontSize || "14px";
+            div.textContent = bubble.text;
+
+            foreignObject.appendChild(div);
+            group.appendChild(foreignObject);
+            svg.appendChild(group);
+        });
+    </script>
+
+<footer><i><B> Wan Harith Copyright </i></B></footer>
+
+</body>
+</html>
