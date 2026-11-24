@@ -229,29 +229,22 @@ audio {
    
 <audio id ="bgMusic" controls loop autoplay>
 <source src="in love.mp3" type="audio/mpeg">
+<button id="playMusic" type="button">Play music</button>
 Your browser does not support the audio element.
 </audio>
 
 <script>
+  const audio = document.getElementById("bgMusic");
+  const playButton = document.getElementById("playMusic");
 
-let aud = 
-document.getElementByID("bgMusic");
-
-function enableAutoplay() {
-aud.muted=true;
-aud.play();
-
-}
-
-function disableAutoplay() { 
-  aud.pause();
-} 
-
-function checkAutoplay() { 
-  alert(!aud.muted);
-} 
-
-function showPage (pageId) {
+  playButton.addEventListener("click", async () => {
+    try {
+      await audio.play();
+      playButton.textContent = "Pause music";
+    } catch (error) {
+      console.error("Could not play audio:", error);
+    }
+  });
 // Hide All page
 document.querySelectorAll('.Education').forEach(Page => {
 page.classList.remove('active');
