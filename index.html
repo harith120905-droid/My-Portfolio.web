@@ -195,8 +195,6 @@ audio {
 
 </style>
 </head>
-<body>
-
 
 <header>
 <nav>
@@ -227,9 +225,9 @@ audio {
 
 <p>🎵 Background Music</p>
    
-<audio id="bgMusic" loop>
-<source src="in love.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
+<audio id="bgMusic" autoplay loop preload="auto">
+    <source src="in love.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
 </audio>
 <button id="playMusic" type="button">Play music</button>
 
@@ -258,18 +256,42 @@ playButton.addEventListener("click", async () => {
         playButton.textContent = "Play music";
     }
 });
-// Hide All page
-document.querySelectorAll('.Education').forEach(Page => {
-page.classList.remove('active');
+
+<script>
+const audio = document.getElementById("bgMusic");
+const playButton = document.getElementById("playMusic");
+
+// Attempt to play music when the website opens
+window.addEventListener("load", async () => {
+    try {
+        await audio.play();
+        playButton.textContent = "Pause Music";
+        console.log("Music playing successfully!");
+    } catch (error) {
+        console.log("Autoplay blocked by browser.");
+        playButton.textContent = "Play Music";
+    }
 });
-// Show the selected page
-document.getElementById(nav-links).classList.add('active');
-}
-</script> 
+
+// Play and pause music
+playButton.addEventListener("click", async () => {
+    try {
+        if (audio.paused) {
+            await audio.play();
+            playButton.textContent = "Pause Music";
+        } else {
+            audio.pause();
+            playButton.textContent = "Play Music";
+        }
+    } catch (error) {
+        console.error("Music playback error:", error);
+    }
+});
+</script>
+
 </div>
 
 <div class="info-list">
-<body>
 <p><b>Name:</b> Wan Harith Bin Mohd Shaiful</p>
 <p><b>Gender:</b> Male</p>
 <p><b>Age:</b> 21 Years Old</p>
@@ -277,7 +299,6 @@ document.getElementById(nav-links).classList.add('active');
 <p><b>Religion:</b> Islam</p>
 <p><b>University:</b> Universiti Teknologi MARA</p>
 <p><b>Faculty:</b> Information Science (Hon.s) Information Management System</p>
-</body>
 </div>
 <hr>
 
@@ -297,23 +318,19 @@ document.getElementById(nav-links).classList.add('active');
 <head>
 <title>Computer Software</title>
 </head>
-<body>
 
 <h2 style="
 background-color:--accent;
-font-color: rgb(0, 153, 255);
-font-family: "Times New Roman", Times, serif;
+font-family: 'Times New Roman', Times, serif;
 text-align: center;
 font-size: 32px;
 padding: 20px;
 margin: 10px;
 border-radius:10px;
-
 ">
 
 <mark><b><i>Computer Software</i></b></mark>
 </h2>
-</body>
 <div>
 <p><b>HTML</b>: HTML Element, Attribute, Value</p>
 <p><b>CSS</b>: Selector, Property, Value</p>
